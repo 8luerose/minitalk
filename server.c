@@ -6,7 +6,7 @@
 /*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/26 19:37:13 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/07/26 20:46:52 by taehkwon         ###   ########.fr       */
+/*   Updated: 2023/07/27 19:59:25 by taehkwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_handler(int signal)
 {
 	static int	bit;
-	static char tmp;
+	static char	tmp;
 
 	if (signal == SIGUSR1)
 	{

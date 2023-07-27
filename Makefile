@@ -1,39 +1,4 @@
 
-# CC = cc
-# CFLAG = -Wall -Wextra -Werror
-
-# NAME = 
-# SERVER = server
-# CLIENT = client
-# SRCS = 	server.c			\
-# 		client.c			\
-# 		minitalk_utils.c	
-
-# OBJS= $(SRCS:.c=.o)
-
-# %.o : %.c
-# 	$(CC) $(CFLAGS) -c $< -o $@
-
-# all: $(SERVER) $(CLIENT)
-
-# $(NAME): all
-
-# $(SERVER): $(OBJS)
-# 	$(CC) $(CFLAG) -o $(SERVER)
-
-# $(CLIENT): $(OBJS)
-# 	$(CC) $(CFLAG) -o $(CLIENT)
-
-# clean:
-# 	rm -f $(OBJS)
-
-# fclean: clean
-# 	rm -f $(SERVER) $(CLIENT)
-
-# re: fclean all
-
-# .PHONY: all clean fclean re
-
 CC = cc
 CFLAG = -Wall -Wextra -Werror
 

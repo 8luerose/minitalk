@@ -6,7 +6,7 @@
 /*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/26 19:36:35 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/07/26 20:21:11 by taehkwon         ###   ########.fr       */
+/*   Updated: 2023/07/27 20:00:05 by taehkwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ void	send_bit(pid_t pid, char ch)
 	bit = 0;
 	while (bit < 8)
 	{
-		if ((ch & 1<<bit) != 0)
+		if ((ch & 1 << bit) != 0)
 			kill(pid, SIGUSR1);
 		else
 			kill(pid, SIGUSR2);
-		usleep(100);
+		usleep(1000);
 		bit++;
 	}
 }
@@ -36,7 +36,7 @@ void	send_message(pid_t pid, char *str)
 	while (str[i] != '\0')
 	{
 		send_bit(pid, str[i]);
-		usleep(100);
+		usleep(1000);
 		i++;
 	}
 	send_bit(pid, '\n');
@@ -49,7 +49,7 @@ int	main(int ac, char **av)
 
 	if (ac != 3)
 		return (ft_error());
-	else 
+	else
 	{
 		pid = ft_atoi(av[1]);
 		if (pid < 100 || pid > 99999)

@@ -6,7 +6,7 @@
 /*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/26 19:24:22 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/07/26 20:01:22 by taehkwon         ###   ########.fr       */
+/*   Updated: 2023/07/27 20:00:25 by taehkwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	ft_putchar_fd(char c, int fd)
 void	ft_putstr_fd(char *s, int fd)
 {
 	int	i;
-	
+
 	i = 0;
 	while (s[i])
 	{
