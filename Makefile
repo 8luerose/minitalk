@@ -1,4 +1,3 @@
-
 CC = cc
 CFLAG = -Wall -Wextra -Werror
 
