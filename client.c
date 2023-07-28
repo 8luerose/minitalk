@@ -6,7 +6,7 @@
 /*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/26 19:36:35 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/07/27 20:00:05 by taehkwon         ###   ########.fr       */
+/*   Updated: 2023/07/28 20:56:08 by taehkwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	send_bit(pid_t pid, char ch)
 			kill(pid, SIGUSR1);
 		else
 			kill(pid, SIGUSR2);
-		usleep(1000);
+		usleep(125);
 		bit++;
 	}
 }
@@ -36,10 +36,9 @@ void	send_message(pid_t pid, char *str)
 	while (str[i] != '\0')
 	{
 		send_bit(pid, str[i]);
-		usleep(1000);
+		usleep(125);
 		i++;
 	}
-	send_bit(pid, '\n');
 	send_bit(pid, '\0');
 }
 
